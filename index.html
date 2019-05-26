@@ -1,0 +1,418 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>React.js basic presentation</title>
+
+	<link rel="shortcut icon" href="/img/logo-react.png" type="image/x-icon">
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h3>React.js</h3>
+				<h3>basic</h3>
+
+			</section>
+
+
+			<section>
+				<section>
+					<h2>What is React.js ?</h2>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+								## What is React.js ?
+								- Developed by Facebook 
+								- React is a view layer library, not a framework like Angular and etc.
+								- You can't use React to build a fully-functional web app
+							</script>
+
+				</section>
+			</section>
+
+
+
+			<section>
+				<section>
+					<h2>Why was React developed ?</h2>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+								## Why was React developed ?
+								- Bad UX from using "cascading updates" of DOM tree 
+								- Complexity of two-way data binding
+								- A lot of data on a page changign over times
+								- Complexity of Facebook's UI architecture
+								- Shift from MVC mentality
+							</script>
+
+				</section>
+			</section>
+
+
+			<section>
+				<section>
+					<h2>Who use React ?</h2>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+								## Users 
+								- Facebook
+								- Instagram
+								- Netflix
+								- Yahoo! Mail
+								- WhatsApp
+								- Dropbox
+
+							</script>
+
+				</section>
+			</section>
+
+
+			<section>
+				<section>
+					<h2>What is good in React ?</h2>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+								## Easy to understand what a component will render 
+								- Declarative code -predictable code
+								- You don't really need to study JS in the view file in 
+								order to understand what the file does
+							</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+									## Easy to mix HTML and JS 
+									- You do it already with template libraries
+									(Underscore, Handlebars and etc.)
+								</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+										## Uses full power of JS 
+										- Decoupling templates from logic does not rely on the
+										templates primitive abstractions,but uses full power
+										of JavaScript in displaying views
+
+									</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+											## No complex two-way data flow
+											- Uses simple one-way reactive data flow
+											- Easier to understand than two-way binding
+											- Uses less code
+										</script>
+				</section>
+
+
+				<section data-markdown>
+					<script type="text/template">
+												## React is fast
+												- Real DOM is slow
+												- JavaScript is fast
+												- Using virtual DOM objects enables fast batch updates of DOM tree
+											</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+													## React dev tools
+													- React Chrome extension makes debugging so much easier 
+												</script>
+				</section>
+
+
+				<section data-markdown>
+					<script type="text/template">
+														## Server-side rendering
+														- React.renderToString() returns pure HTML
+													</script>
+				</section>
+			</section>
+
+
+			<section>
+				<section>
+					<h2>What is bad in React ?</h2>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+								## React is nothing but the view
+								- No events
+								- No XHR
+								- No data/models 
+								- No promises/deferreds 
+								- No idea how to add all of the above
+							</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+									## Architectural annoyances
+									- Setting state on unmounted components
+								</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+										## Building JSX requires some extra work
+										- But most of the work is already done for you by react-tools
+									</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+											## No support for older browsers
+											- React won't work with IE8
+											- There some polyfills/shims that help
+											
+										</script>
+				</section>
+			</section>
+
+
+
+			<section>
+				<section>
+					<h2>Why should we use React ?</h2>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+								## Why should we use React ?
+								- Easy to read and understand views
+								- Concept of components is the future of web development
+								- No data/models 
+								- No promises/deferreds 
+								- No idea how to add all of the above
+							</script>
+				</section>
+			</section>
+
+
+
+
+			<section>
+				<section>
+					<h2>Is switching to React easy ?</h2>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+								## Is switching to React easy ?
+								Understanding how it works will take time and will slow you
+								down at first (but once you and your team get it, things will
+								start happening much faster)
+							</script>
+				</section>
+			</section>
+
+
+			<section>
+				<h2>Most important terms in React</h2>
+			</section>
+
+
+			<section>
+				<section>
+					<h2>Components</h2>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+								## Component 
+								Components are self-contained reusable building blocks
+								of web application.
+								React components are basically just idempotent functions
+								(same input poduces same output). 
+								They describe your UI at any point in time, just like a sever-rendered app.
+							</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+									## Component
+									- Created using React.createClass()
+									- The only required method is render()
+									- Instead into DOM using React.renderComponent()
+
+									<pre><code>
+										let React = require('react'),
+										    SimpleView = React.createClass({
+												render: function () {
+													return <h1>
+															  <strong>Example 1:</strong> 
+															  A simple component
+															</h1>;
+												}
+											});
+
+										React.renderComponent(SimpleView(), document.getElementById('example'));             	
+									</code></pre>
+								</script>
+				</section>
+			</section>
+
+
+			<section>
+				<section>
+					<h2>Props</h2>
+				</section>
+
+
+				<section data-markdown>
+					<script type="text/template">
+									## Props
+									- Passed down to component from parent component
+									and represents data for the component
+									- Assed via this.props
+
+									<pre><code>
+										render: function() {
+										 let someProp = 'bar';
+
+										 console.log('component render()', this.props);
+
+										 return <div>
+									     <AnotherComponent foo={someProp} model={this.props.model}/>
+										 </div>; 
+										}
+									</code></pre>
+								</script>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>State</h2>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+								## State
+								- Represents internal state of the component
+								- Accessed via this.state
+								- When a component's state data changes, the rendered markup
+								will updated by re-invoking render() method
+
+								<pre><code>
+									render: function() {
+									 return <h3>Click count;
+									 	<span className='label label-default'>{this.state.clicks}</span>
+									 </h3> 
+									}
+								</code></pre>
+							</script>
+				</section>
+			</section>
+
+
+
+
+			<section>
+				<section>
+					<h2>JSX</h2>
+				</section>
+
+
+				<section data-markdown>
+					<script type="text/template">
+							## JSX
+							- Arguably, one of the coolest things in React
+							- XML-like syntax for generating component's HTML
+							- Easier to read and understand large DOM trees
+							- Translates to plain JavaScript using react-tools
+
+							<pre><code>
+								<!-- JSX React.DOM -->
+								render: function() {
+								 return<div>
+									 <h2>
+										 <strong>Example 4: </strong> React App
+									 </h2>
+									</div>;
+								}	
+								<!-- regular DOM -->
+								render: function () {
+									return React.DOM.div(null,
+									 React.DOM.h2(nullReact.DOM.strong(null, "Example 4:"), "React App")
+									);
+								}
+							</code></pre>
+						</script>
+				</section>
+			</section>
+
+
+			<section>
+				<section>
+					<h2>Virtual DOM</h2>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					## Virtual DOM
+					- The virtual DOM is used for efficient re-rendering of the DOM
+					- React aims to re-render the virtual tree only when the state changes
+					- Uses 2 virtual trees (new and previous) to find differences and datch update real DOM
+					- Odserves data changes (setState) and does dirty checking to know when
+						to re-render component
+					- Whenever possible, does not update entire component in real DOM - only
+					  computes a patch operation that updates part of the DOM	
+				</script>
+				</section>
+			</section>
+			</script>
+			</section>
+		</div>
+	</div>
+
+
+
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true }
+			]
+		});
+	</script>
+</body>
+
+</html>
